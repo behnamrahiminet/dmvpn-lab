@@ -10,3 +10,4 @@ interface Tunnel0
  ip tcp adjust-mss 1360
  tunnel source GigabitEthernet0/0
  tunnel mode gre multipoint
+ ip nhrp map multicast dynamic
