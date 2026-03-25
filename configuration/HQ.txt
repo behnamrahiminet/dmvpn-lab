@@ -1,0 +1,15 @@
+ ip address 172.25.15.100 255.255.255.0
+ duplex auto
+ speed auto
+ media-type rj45
+end
+
+interface Tunnel0
+ ip address 10.0.0.100 255.255.255.0
+ no ip redirects
+ ip mtu 1400
+ ip nhrp network-id 1
+ ip tcp adjust-mss 1360
+ tunnel source GigabitEthernet0/0
+ tunnel mode gre multipoint
+end
